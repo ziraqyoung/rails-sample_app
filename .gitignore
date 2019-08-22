@@ -28,3 +28,7 @@
 
 # Ignore vscode settings
 .vscode
+# Ignore spring
+spring/
+# Ignore Spring files.
+spring*.pid
