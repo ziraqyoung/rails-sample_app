@@ -24,15 +24,21 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
+
+
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
+gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap-will_paginate', '0.0.10'
 gem 'jquery-rails'
-
-
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.8'
+gem 'carrierwave', '0.11.2'
+gem 'faker', '1.6.3'
+gem 'fog', '1.38.0'
+gem 'will_paginate', '3.1.0'
+
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
