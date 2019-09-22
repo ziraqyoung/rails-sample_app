@@ -11,9 +11,10 @@ class User < ApplicationRecord
             format: { with: VALID_EMAIL_REGEX },
             length: { maximum: 255 },
             uniqueness: { case_sensitive: false }
-  validates :password,
-            :password_confirmation,
-            presence: true, length: { minimum: 6 }
+  # Using allow_nil, still requires new users to sign up with password
+  # (required by bcrypt), though in this case update wont need password confirmation.
+  validates :password, presence: true, length: { minimum: 6 }, allow_blank: true
+
   # bcrypt
   has_secure_password
 

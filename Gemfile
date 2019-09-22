@@ -36,9 +36,7 @@ gem 'mini_magick', '~> 4.8'
 gem 'carrierwave', '0.11.2'
 gem 'faker', '1.6.3'
 gem 'fog', '1.38.0'
-gem 'will_paginate', '3.1.0'
-
-
+gem 'will_paginate', '3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
