@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  # site layout
   root 'static_pages#home'
   get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
+  # Sign up handler
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
   # login handler
@@ -11,5 +13,5 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   # users
   resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :account_activations, only: %i[edit]
 end
