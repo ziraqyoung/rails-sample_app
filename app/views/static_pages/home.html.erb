@@ -1,11 +1,28 @@
-<div class="jumbotron text-center">
-  <div class="container">
-    <h1>Welcome to Sample App</h1>
-    <p>
-      This is the home page for the <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a> sample application.
-    </p>
-    <%= link_to 'Sign Up', signup_path, class: 'btn btn-lg btn-primary' %>
-
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h1>Micropost Feed</h1>
+      <%= render 'shared/feed' %>
+    </div>
   </div>
-</div>
-<%= link_to image_tag('rails.png', alt: 'Rails Logo'), 'http://rubyonrails.org/' %>
+<% else %>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h1>Welcome to Sample App</h1>
+      <p>
+        This is the home page for the <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a> sample application.
+      </p>
+      <%= link_to 'Sign Up', signup_path, class: 'btn btn-lg btn-primary' %>
+
+    </div>
+  </div>
+  <%= link_to image_tag('rails.png', alt: 'Rails Logo'), 'http://rubyonrails.org/' %>
+<% end %>
